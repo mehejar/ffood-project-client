@@ -1,0 +1,482 @@
+[
+    {
+        "_id": 1,
+        "name": "Basmati Rice",
+        "category": "Rice",
+        "description": "Premium long grain basmati rice with rich aroma.",
+        "price": 20.99,
+        "weight": 4.0,
+        "sub_category": "White Rice",
+        "image": "basmati_rice.jpg"
+    },
+    {
+        "_id": 2,
+        "name": "Brown Rice",
+        "category": "Rice",
+        "description": "Organic brown rice, rich in fiber and nutrients.",
+        "price": 18.99,
+        "weight": 3.5,
+        "sub_category": "Whole Grain",
+        "image": "brown_rice.jpg"
+    },
+    {
+        "_id": 3,
+        "name": "Jasmine Rice",
+        "category": "Rice",
+        "description": "Fragrant jasmine rice, perfect for Asian cuisine.",
+        "price": 22.49,
+        "weight": 4.0,
+        "sub_category": "White Rice",
+        "image": "jasmine_rice.jpg"
+    },
+    {
+        "_id": 4,
+        "name": "Red Lentils",
+        "category": "Pulses",
+        "description": "High-protein red lentils, great for soups and stews.",
+        "price": 12.99,
+        "weight": 2.5,
+        "sub_category": "Lentils",
+        "image": "red_lentils.jpg"
+    },
+    {
+        "_id": 5,
+        "name": "Chickpeas",
+        "category": "Pulses",
+        "description": "Versatile chickpeas, ideal for salads and hummus.",
+        "price": 9.99,
+        "weight": 3.0,
+        "sub_category": "Beans",
+        "image": "chickpeas.jpg"
+    },
+    {
+        "_id": 6,
+        "name": "Black Beans",
+        "category": "Pulses",
+        "description": "Organic black beans, perfect for Mexican dishes.",
+        "price": 11.49,
+        "weight": 3.2,
+        "sub_category": "Beans",
+        "image": "black_beans.jpg"
+    },
+    {
+        "_id": 7,
+        "name": "Turmeric Powder",
+        "category": "Spices",
+        "description": "Pure turmeric powder, known for its health benefits.",
+        "price": 6.99,
+        "weight": 2.0,
+        "sub_category": "Ground Spices",
+        "image": "turmeric_powder.jpg"
+    },
+    {
+        "_id": 8,
+        "name": "Cumin Seeds",
+        "category": "Spices",
+        "description": "Whole cumin seeds, essential for various cuisines.",
+        "price": 5.99,
+        "weight": 2.1,
+        "sub_category": "Whole Spices",
+        "image": "cumin_seeds.jpg"
+    },
+    {
+        "_id": 9,
+        "name": "Coriander Powder",
+        "category": "Spices",
+        "description": "Finely ground coriander powder with a fresh aroma.",
+        "price": 4.99,
+        "weight": 2.3,
+        "sub_category": "Ground Spices",
+        "image": "coriander_powder.jpg"
+    },
+    {
+        "_id": 10,
+        "name": "Extra Virgin Olive Oil",
+        "category": "Oil & Ghee",
+        "description": "Cold-pressed extra virgin olive oil for salads and cooking.",
+        "price": 15.99,
+        "weight": 3.4,
+        "sub_category": "Olive Oil",
+        "image": "extra_virgin_olive_oil.jpg"
+    },
+    {
+        "_id": 11,
+        "name": "Coconut Oil",
+        "category": "Oil & Ghee",
+        "description": "Organic coconut oil, perfect for cooking and baking.",
+        "price": 12.49,
+        "weight": 3.5,
+        "sub_category": "Coconut Oil",
+        "image": "coconut_oil.jpg"
+    },
+    {
+        "_id": 12,
+        "name": "Ghee",
+        "category": "Oil & Ghee",
+        "description": "Pure clarified butter, ideal for traditional cooking.",
+        "price": 19.99,
+        "weight": 2.9,
+        "sub_category": "Ghee",
+        "image": "ghee.jpg"
+    },
+    {
+        "_id": 13,
+        "name": "Whole Wheat Flour",
+        "category": "Flour",
+        "description": "100% whole wheat flour, perfect for baking.",
+        "price": 7.99,
+        "weight": 4.0,
+        "sub_category": "Wheat Flour",
+        "image": "whole_wheat_flour.jpg"
+    },
+    {
+        "_id": 14,
+        "name": "Almond Flour",
+        "category": "Flour",
+        "description": "Blanched almond flour, great for gluten-free recipes.",
+        "price": 14.99,
+        "weight": 2.2,
+        "sub_category": "Nut Flour",
+        "image": "almond_flour.jpg"
+    },
+    {
+        "_id": 15,
+        "name": "Rice Flour",
+        "category": "Flour",
+        "description": "Fine rice flour, perfect for baking and thickening.",
+        "price": 5.99,
+        "weight": 3.0,
+        "sub_category": "Gluten-Free Flour",
+        "image": "rice_flour.jpg"
+    },
+    {
+        "_id": 16,
+        "name": "Biryani Rice",
+        "category": "Rice",
+        "description": "Aromatic biryani rice, ideal for flavorful biryanis.",
+        "price": 23.99,
+        "weight": 4.0,
+        "sub_category": "Specialty Rice",
+        "image": "biryani_rice.jpg"
+    },
+    {
+        "_id": 17,
+        "name": "Green Lentils",
+        "category": "Pulses",
+        "description": "Nutritious green lentils, excellent for soups and salads.",
+        "price": 10.99,
+        "weight": 2.7,
+        "sub_category": "Lentils",
+        "image": "green_lentils.jpg"
+    },
+    {
+        "_id": 18,
+        "name": "Kidney Beans",
+        "category": "Pulses",
+        "description": "Rich and hearty kidney beans, great for chili.",
+        "price": 8.99,
+        "weight": 3.1,
+        "sub_category": "Beans",
+        "image": "kidney_beans.jpg"
+    },
+    {
+        "_id": 19,
+        "name": "Ground Black Pepper",
+        "category": "Spices",
+        "description": "Freshly ground black pepper, essential for seasoning.",
+        "price": 7.49,
+        "weight": 2.0,
+        "sub_category": "Ground Spices",
+        "image": "ground_black_pepper.jpg"
+    },
+    {
+        "_id": 20,
+        "name": "Cardamom Pods",
+        "category": "Spices",
+        "description": "Whole cardamom pods, perfect for baking and cooking.",
+        "price": 9.99,
+        "weight": 2.4,
+        "sub_category": "Whole Spices",
+        "image": "cardamom_pods.jpg"
+    },
+    {
+        "_id": 21,
+        "name": "Mustard Oil",
+        "category": "Oil & Ghee",
+        "description": "Pure mustard oil, ideal for traditional cooking.",
+        "price": 13.99,
+        "weight": 3.3,
+        "sub_category": "Mustard Oil",
+        "image": "mustard_oil.jpg"
+    },
+    {
+        "_id": 22,
+        "name": "Sesame Oil",
+        "category": "Oil & Ghee",
+        "description": "Cold-pressed sesame oil, perfect for Asian cuisine.",
+        "price": 11.49,
+        "weight": 3.2,
+        "sub_category": "Sesame Oil",
+        "image": "sesame_oil.jpg"
+    },
+    {
+        "_id": 23,
+        "name": "Corn Flour",
+        "category": "Flour",
+        "description": "Finely ground corn flour, ideal for baking.",
+        "price": 6.99,
+        "weight": 3.1,
+        "sub_category": "Gluten-Free Flour",
+        "image": "corn_flour.jpg"
+    },
+    {
+        "_id": 24,
+        "name": "Sticky Rice",
+        "category": "Rice",
+        "description": "Sweet sticky rice, perfect for desserts.",
+        "price": 21.49,
+        "weight": 3.8,
+        "sub_category": "Specialty Rice",
+        "image": "sticky_rice.jpg"
+    },
+    {
+        "_id": 25,
+        "name": "Pigeon Peas",
+        "category": "Pulses",
+        "description": "Nutritious pigeon peas, ideal for Indian dishes.",
+        "price": 11.99,
+        "weight": 3.0,
+        "sub_category": "Beans",
+        "image": "pigeon_peas.jpg"
+    },
+    {
+        "_id": 26,
+        "name": "Bay Leaves",
+        "category": "Spices",
+        "description": "Whole bay leaves, perfect for soups and stews.",
+        "price": 4.99,
+        "weight": 2.1,
+        "sub_category": "Whole Spices",
+        "image": "bay_leaves.jpg"
+    },
+    {
+        "_id": 27,
+        "name": "Ground Cinnamon",
+        "category": "Spices",
+        "description": "Aromatic ground cinnamon, great for baking.",
+        "price": 5.99,
+        "weight": 2.2,
+        "sub_category": "Ground Spices",
+        "image": "ground_cinnamon.jpg"
+    },
+    {
+        "_id": 28,
+        "name": "Sunflower Oil",
+        "category": "Oil & Ghee",
+        "description": "Pure sunflower oil, suitable for high-heat cooking.",
+        "price": 10.49,
+        "weight": 3.4,
+        "sub_category": "Sunflower Oil",
+        "image": "sunflower_oil.jpg"
+    },
+    {
+        "_id": 29,
+        "name": "Peanut Oil",
+        "category": "Oil & Ghee",
+        "description": "High-quality peanut oil, perfect for frying.",
+        "price": 14.99,
+        "weight": 3.5,
+        "sub_category": "Peanut Oil",
+        "image": "peanut_oil.jpg"
+    },
+    {
+        "_id": 30,
+        "name": "Sorghum Flour",
+        "category": "Flour",
+        "description": "Gluten-free sorghum flour, ideal for baking.",
+        "price": 7.49,
+        "weight": 2.6,
+        "sub_category": "Gluten-Free Flour",
+        "image": "sorghum_flour.jpg"
+    },
+    {
+        "_id": 31,
+        "name": "Arborio Rice",
+        "category": "Rice",
+        "description": "Italian arborio rice, perfect for risotto.",
+        "price": 24.99,
+        "weight": 3.9,
+        "sub_category": "Specialty Rice",
+        "image": "arborio_rice.jpg"
+    },
+    {
+        "_id": 32,
+        "name": "Green Split Peas",
+        "category": "Pulses",
+        "description": "High-protein green split peas, great for soups.",
+        "price": 9.49,
+        "weight": 2.8,
+        "sub_category": "Lentils",
+        "image": "green_split_peas.jpg"
+    },
+    {
+        "_id": 33,
+        "name": "Adzuki Beans",
+        "category": "Pulses",
+        "description": "Nutrient-rich adzuki beans, ideal for Asian dishes.",
+        "price": 12.99,
+        "weight": 3.0,
+        "sub_category": "Beans",
+        "image": "adzuki_beans.jpg"
+    },
+    {
+        "_id": 34,
+        "name": "Saffron Threads",
+        "category": "Spices",
+        "description": "Premium saffron threads, known for their unique flavor.",
+        "price": 29.99,
+        "weight": 2.0,
+        "sub_category": "Whole Spices",
+        "image": "saffron_threads.jpg"
+    },
+    {
+        "_id": 35,
+        "name": "Paprika",
+        "category": "Spices",
+        "description": "Smoked paprika, adds a rich flavor to dishes.",
+        "price": 6.49,
+        "weight": 2.2,
+        "sub_category": "Ground Spices",
+        "image": "paprika.jpg"
+    },
+    {
+        "_id": 36,
+        "name": "Canola Oil",
+        "category": "Oil & Ghee",
+        "description": "Light and healthy canola oil, ideal for everyday use.",
+        "price": 8.99,
+        "weight": 3.4,
+        "sub_category": "Canola Oil",
+        "image": "canola_oil.jpg"
+    },
+    {
+        "_id": 37,
+        "name": "Clarified Butter Ghee",
+        "category": "Oil & Ghee",
+        "description": "Rich and flavorful clarified butter ghee.",
+        "price": 17.99,
+        "weight": 2.8,
+        "sub_category": "Ghee",
+        "image": "clarified_butter_ghee.jpg"
+    },
+    {
+        "_id": 38,
+        "name": "Chickpea Flour",
+        "category": "Flour",
+        "description": "Versatile chickpea flour, perfect for gluten-free baking.",
+        "price": 6.99,
+        "weight": 2.5,
+        "sub_category": "Gluten-Free Flour",
+        "image": "chickpea_flour.jpg"
+    },
+    {
+        "_id": 39,
+        "name": "Sushi Rice",
+        "category": "Rice",
+        "description": "Authentic sushi rice, perfect for homemade sushi.",
+        "price": 25.99,
+        "weight": 3.6,
+        "sub_category": "Specialty Rice",
+        "image": "sushi_rice.jpg"
+    },
+    {
+        "_id": 40,
+        "name": "Yellow Lentils",
+        "category": "Pulses",
+        "description": "Nutritious yellow lentils, ideal for soups and curries.",
+        "price": 10.99,
+        "weight": 2.7,
+        "sub_category": "Lentils",
+        "image": "yellow_lentils.jpg"
+    },
+    {
+        "_id": 41,
+        "name": "Mung Beans",
+        "category": "Pulses",
+        "description": "Healthy mung beans, great for sprouting and cooking.",
+        "price": 9.99,
+        "weight": 3.1,
+        "sub_category": "Beans",
+        "image": "mung_beans.jpg"
+    },
+    {
+        "_id": 42,
+        "name": "Whole Cloves",
+        "category": "Spices",
+        "description": "Aromatic whole cloves, perfect for cooking and baking.",
+        "price": 7.99,
+        "weight": 2.0,
+        "sub_category": "popular",
+        "image": "whole_cloves.jpg"
+    },
+    {
+        "_id": 43,
+        "name": "Fenugreek Seeds",
+        "category": "Spices",
+        "description": "Whole fenugreek seeds, used in various cuisines.",
+        "price": 4.49,
+        "weight": 2.3,
+        "sub_category": "Whole Spices",
+        "image": "fenugreek_seeds.jpg"
+    },
+    {
+        "_id": 44,
+        "name": "Avocado Oil",
+        "category": "Oil & Ghee",
+        "description": "Cold-pressed avocado oil, perfect for high-heat cooking.",
+        "price": 16.99,
+        "weight": 3.5,
+        "sub_category": "Avocado Oil",
+        "image": "avocado_oil.jpg"
+    },
+    {
+        "_id": 45,
+        "name": "Rice Bran Oil",
+        "category": "Oil & Ghee",
+        "description": "Healthy rice bran oil, ideal for frying and baking.",
+        "price": 12.49,
+        "weight": 3.3,
+        "sub_category": "Rice Bran Oil",
+        "image": "rice_bran_oil.jpg"
+    },
+    {
+        "_id": 46,
+        "name": "Millet Flour",
+        "category": "Flour",
+        "description": "Gluten-free millet flour, great for baking.",
+        "price": 8.49,
+        "weight": 2.6,
+        "sub_category": "popular",
+        "image": "millet_flour.jpg"
+    },
+    {
+        "_id": 47,
+        "name": "Wild Rice",
+        "category": "Rice",
+        "description": "Nutty and flavorful wild rice, perfect for salads.",
+        "price": 26.99,
+        "weight": 3.7,
+        "sub_category": "popular",
+        "image": "wild_rice.jpg"
+    },
+    {
+        "_id": 48,
+        "name": "Black Eyed Peas",
+        "category": "Pulses",
+        "description": "Versatile black eyed peas, great for stews and soups.",
+        "price": 10.49,
+        "weight": 3.0,
+        "sub_category": "popular",
+        "image": "black_eyed_peas.jpg"
+    }
+]
