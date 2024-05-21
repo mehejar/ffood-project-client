@@ -6,10 +6,11 @@ import { RiMenuSearchFill } from "react-icons/ri";
 import { IoMdListBox } from "react-icons/io";
 import { FaUsers } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom"
+import useAdmin from "../../Hooks/useAdmin";
 
 
 const Dashboard = () =>{
-    const isAdmin = true;
+    const [isAdmin] = useAdmin()
     return (
         <div className="flex">
             <div className="w-1/5 min-h-screen bg-[#D1A054]">
