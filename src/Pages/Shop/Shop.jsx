@@ -16,10 +16,10 @@ const Shop = () => {
     const [products] = useProducts()
     console.log(category)
 
-    const rice = products.filter(item => item.category === 'Rice')
-    const pulses = products.filter(item => item.category === 'Pulses')
-    const spices = products.filter(item => item.category === 'Spices')
-    const flour = products.filter(item => item.category === 'Flour')
+    const rice = products.filter(item => item.category === 'rice')
+    const pulses = products.filter(item => item.category === 'pulses')
+    const spices = products.filter(item => item.category === 'spices')
+    const flour = products.filter(item => item.category === 'flour')
     const oil = products.filter(item => item.category === 'Oil & Ghee')
 
     return (

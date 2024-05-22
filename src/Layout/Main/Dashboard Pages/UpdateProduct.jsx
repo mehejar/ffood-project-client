@@ -1,15 +1,29 @@
+import { useLoaderData } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import useAxiosPublic from "../../../Hooks/useAxiosPublic"
 import useAxiosSecure from "../../../Hooks/useAxiosSecure"
 import Swal from "sweetalert2"
 
+
 const image_hosting_key = 'e4461ef5124ec2b2f2efc56f53ded9cb'
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 
-const AddItem = () => {
+const UpdateProduct = () =>{
+
+    const product = useLoaderData()
+    const {name,
+        _id,
+        category,
+        price,
+        description,
+        sub_category,
+        weight,} = product;
+
+    const { register, handleSubmit, reset } = useForm()
+    console.log(product)
     const axiosPublic = useAxiosPublic()
     const axiosSecure = useAxiosSecure()
-    const { register, handleSubmit, reset } = useForm()
+   
     const onSubmit = async (data) => {
         // console.log(data)
         // image hosting api
@@ -31,14 +45,14 @@ const AddItem = () => {
                 image: res.data.data.display_url
             }
             console.log(product)
-            const productRes = await axiosSecure.post('/products', product)
+            const productRes = await axiosSecure.patch(`/products/${_id}`, product)
             console.log('Added', productRes.data)
-            if (productRes.data.insertedId) {
+            if (productRes.data.modifiedCount > 0) {
                 reset()
                 Swal.fire({
                     position: "top",
-                    icon: "Added Successfully",
-                    title: "Your item added to the card",
+                    icon: "Update Successfully",
+                    title: "Your item updated to the list",
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -48,9 +62,8 @@ const AddItem = () => {
         }
     }
 
-    return (
+    return(
         <div>
-
             <div className="w-2/4 mx-auto">
                 <form className="" onSubmit={handleSubmit(onSubmit)}>
 
@@ -60,6 +73,7 @@ const AddItem = () => {
                         </label>
                         <input {...register("name")}
                             type="text"
+                            defaultValue={name}
                             placeholder="Write product name"
                             className="input input-bordered w-full " />
                     </div>
@@ -69,7 +83,7 @@ const AddItem = () => {
                             <label className="label">
                                 <span className="label-text">Category*</span>
                             </label>
-                            <select defaultValue='value' {...register("category")} className=" select select-bordered w-full">
+                            <select defaultValue={category} {...register("category")} className=" select select-bordered w-full">
                                 <option disabled selected>Choose A Food Category</option>
                                 <option value="rice">Rice</option>
                                 <option value="flour">Flour</option>
@@ -95,6 +109,7 @@ const AddItem = () => {
                             </label>
                             <input {...register("price")}
                                 type="text"
+                                defaultValue={price}
                                 placeholder="Price"
                                 className="input input-bordered w-full " />
                         </div>
@@ -106,7 +121,7 @@ const AddItem = () => {
                             <label className="label">
                                 <span className="label-text">Product Type*</span>
                             </label>
-                            <select defaultValue='value' {...register("sub_category")} className=" select select-bordered w-full">
+                            <select defaultValue={sub_category} {...register("sub_category")} className=" select select-bordered w-full">
                                 <option disabled selected>Choose A Product Type</option>
                                 <option value="general">General</option>
                                 <option value="popular">Popular</option>
@@ -119,7 +134,7 @@ const AddItem = () => {
                             <label className="label">
                                 <span className="label-text">Weight*</span>
                             </label>
-                            <select defaultValue='value' {...register("weight")} className=" select select-bordered w-full">
+                            <select defaultValue={weight} {...register("weight")} className=" select select-bordered w-full">
                                 <option disabled selected>Choose A Food Category</option>
                                 <option value="2lbs">2 lbs</option>
                                 <option value="4lbs">4 lbs</option>
@@ -137,6 +152,7 @@ const AddItem = () => {
                         </label>
                         <input {...register("recipe")}
                             type="text"
+                            defaultValue={description}
                             placeholder="details"
                             className="input  input-bordered w-full " />
                     </div>
@@ -153,4 +169,4 @@ const AddItem = () => {
     )
 }
 
-export default AddItem
+export default UpdateProduct
