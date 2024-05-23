@@ -4,6 +4,8 @@ import { MdShoppingCart } from "react-icons/md";
 import { useContext } from "react";
 import { AuthContex } from "../Provider/AuthProvider";
 import useCart from "../Hooks/useCart";
+import { RiLoginBoxLine } from "react-icons/ri";
+
 
 
 const Navbar = () => {
@@ -24,16 +26,17 @@ const Navbar = () => {
 
     const navLinks = <>
 
-        <NavLink to='/'><li><a>Home</a></li></NavLink>
-        <NavLink to='/shop'><li><a>All Category</a></li></NavLink>
-        <NavLink to='/dashboard'><li><a>Dashboard</a></li></NavLink>
+        <NavLink to='/'><li className="text-lg font-semibold"><a>Home</a></li></NavLink>
+        <NavLink to='/shop'><li className="text-lg font-semibold"><a>All Category</a></li></NavLink>
+        <NavLink to='/dashboard'><li className="text-lg font-semibold"><a>Dashboard</a></li></NavLink>
 
         {
             user ? <>
-                <button onClick={handleSignOut} className="btn">Sign Out</button>
+                <button onClick={handleSignOut} className="flex gap-2 items-center text-lg font-semibold"><RiLoginBoxLine></RiLoginBoxLine>Sign Out</button>
             </> :
-                <><NavLink to='/login'><li><a>Login</a></li></NavLink></>
+                <NavLink to={'/login'}><button className="flex gap-2 text-lg font-semibold  items-center"><RiLoginBoxLine></RiLoginBoxLine>Login</button></NavLink>
         }
+        
     </>
     return (
         <div className="navbar bg-base-100">
@@ -44,6 +47,7 @@ const Navbar = () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {navLinks}
+                        
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl"><div>
@@ -61,6 +65,7 @@ const Navbar = () => {
                     
                     <button className="text-2xl"><MdShoppingCart></MdShoppingCart></button>
                 </div></NavLink>
+                
             </div>
         </div>
     )

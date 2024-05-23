@@ -66,7 +66,7 @@ const PopularProducts = () => {
                           spaceBetween: 20,
                         },
                         1024: {
-                          slidesPerView: 4,
+                          slidesPerView: 5,
                           spaceBetween: 50,
                         },}}
                     navigation={true} 

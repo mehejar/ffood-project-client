@@ -50,7 +50,7 @@ const CartItem = ({ item }) => {
 
                 <div className="flex items-center gap-10 lg:gap-36">
                     <div>
-                        <img className="w-[100px] rounded-md text-left" src='https://i.ibb.co/Y7HsxNv/Elach-33-08.jpg' alt="" />
+                        <img className="w-[100px] rounded-md text-left" src={image} alt="" />
                     </div>
                     <div className="lg:w-[300px] lg:-ml-28 text-left">
                         <h2 className="text-xl font-semibold">{name}</h2>

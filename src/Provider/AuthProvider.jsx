@@ -31,13 +31,14 @@ const AuthProvider = ({children}) =>{
     useEffect(() =>{
        const unsubscribe = onAuthStateChanged(auth, currentUser =>{
             setUser(currentUser);
+            console.log(currentUser)
             if(currentUser){
                 // get token and store client
                 const userInfo = {email: currentUser.email};
                 axios.post('http://localhost:5000/jwt', userInfo)
                 
                 .then(res =>{
-                    console.log('TOKEN',res.data.token)
+                    // console.log('TOKEN',res.data.token)
                     if(res.data.token){
                         localStorage.setItem('access-token', res.data.token)
                     }

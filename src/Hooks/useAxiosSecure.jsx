@@ -13,12 +13,12 @@ const axiosSecure = axios.create({
 
 const useAxiosSecure = () =>{
 
-    const { logOut } = useContext(AuthContex)
+    const { logOut, loading } = useContext(AuthContex)
     const navigate = useNavigate()
 
     axiosSecure.interceptors.request.use(function (config) {
         const token = localStorage.getItem('access-token')
-        console.log('stopped by interseptors', token)
+        // console.log('stopped by interseptors', token)
         config.headers.authorization = `Bearer ${token}`;
         return config;
     }, function (error) {
@@ -27,8 +27,11 @@ const useAxiosSecure = () =>{
 
     });
     axiosSecure.interceptors.response.use(function (response) {
+        
         return response;
     }, async (error) => {
+        
+
         const status = error.response.status;
         // console.log('status error in interseptors', status);
         if (status === 401 || status === 403) {

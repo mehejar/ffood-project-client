@@ -6,16 +6,16 @@ import useAxiosSecure from "../Hooks/useAxiosSecure"
 import useCart from "../Hooks/useCart"
 
 const ProductsCard = ({ item }) => {
-    const { name, image, price, weight, description, _id} = item
-      
-    const {user} = useContext(AuthContex);
+    const { name, image, price, weight, description, _id } = item
+
+    const { user } = useContext(AuthContex);
     const navigate = useNavigate()
     const location = useLocation()
     const axiosSecure = useAxiosSecure()
     const [, refetch] = useCart()
 
     const handlecart = (item) => {
-        if( user && user.email){
+        if (user && user.email) {
             const cartItem = {
                 menuId: _id,
                 email: user.email,
@@ -26,22 +26,22 @@ const ProductsCard = ({ item }) => {
 
             }
             axiosSecure.post('/cart', cartItem)
-            .then(res =>{
-                console.log(res.data)
-                
-                if(res.data.insertedId){
-                    refetch()
-                    Swal.fire({
-                        position: "top",
-                        icon: "Added Successfully",
-                        title: "Your item added to the card",
-                        showConfirmButton: false,
-                        timer: 1500
-                      });
-                }
-            })
+                .then(res => {
+                    console.log(res.data)
+
+                    if (res.data.insertedId) {
+                        refetch()
+                        Swal.fire({
+                            position: "top",
+                            icon: "Added Successfully",
+                            title: "Your item added to the card",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                })
         }
-        else{
+        else {
             Swal.fire({
                 title: "You are not login",
                 text: "You won't be able to revert this!",
@@ -50,36 +50,60 @@ const ProductsCard = ({ item }) => {
                 confirmButtonColor: "#3085d6",
                 cancelButtonColor: "#d33",
                 confirmButtonText: "Login Now"
-              }).then((result) => {
+            }).then((result) => {
                 if (result.isConfirmed) {
-                    navigate('/login', {state: {from: location}})
+                    navigate('/login', { state: { from: location } })
                 }
-              });
+            });
         }
         console.log(item, user.email);
     }
 
     return (
         <div>
-            <div className="card  bg-base-100 border-2 border-gray-100">
-                <figure className="px-5 pt-5">
-                    <img src={image} alt="Shoes" className="rounded-xl" />
-                </figure>
-                <div className="card-body items-center text-center">
-                    <h2 className="card-title">{name}</h2>
-                    <p>{description}</p>
-                    <div className="flex justify-between">
-                        <p className="pr-10 ">${price}</p>
-                        <p>{weight} lbs</p>
+            <div>
+                <div className="border-2 p-4 border-green-300">
+                    <div>
+                    <img className="w-[200px]" src={image}alt="" />
+                    <div className="divider"></div>
                     </div>
-                    <div className="card-actions">
+                    <div>
+                        <div>
+                            <h2 className="text-lg pt-3 px-3 font-semibold text-gray-600 text-left">{name}</h2>
+                        </div>
+                        <div className="flex py-3 px-3 justify-between">
+                            <h2 className=" font-semibold">${price}.00</h2>
+                            <h2>{weight}</h2>
+                        </div>
+                        <div>
                         <button
                             onClick={() => handlecart(item)}
-                            className="btn btn-primary">Add to Cart
+                            className="bg-green-500 py-2 w-full rounded-md text-white  ">Add to Cart
                         </button>
+                        </div>
                     </div>
                 </div>
             </div>
+            {/* <div className=" bg-white border-2 border-green-200">
+                <div className="w-[300px] mx-auto">
+                    <img src={image} alt="Image" className="rounded-xl w-[300px] mx-auto" />
+                </div>
+                <div className="divider"></div>
+                <div className=" px-7 pb-4 items-center text-center">
+                    <h2 className="font-semibold">{name}</h2>
+                    <p>{description}</p>
+                    <div className="flex font-semibold px-3 py-4 justify-between">
+                        <p className="pr-10 font-bold py-2 text-2xl ">${price}</p>
+                        <p className="py-2">{weight}</p>
+                    </div>
+                    <div className="">
+                        <button
+                            onClick={() => handlecart(item)}
+                            className="bg-green-500 py-2 px-20 rounded-md text-white  ">Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div> */}
         </div>
     )
 }

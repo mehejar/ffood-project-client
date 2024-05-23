@@ -14,6 +14,8 @@ import AllUsers from "../Layout/Main/Dashboard Pages/AllUsers";
 import AdminRoute from "./AdminRoute";
 import ManagePorducts from "../Layout/Main/Dashboard Pages/ManageProducts";
 import UpdateProduct from "../Layout/Main/Dashboard Pages/UpdateProduct";
+import CheckOutForm from "../Pages/Cart/CheckoutForm";
+import ManageOrders from "../Layout/Main/Dashboard Pages/ManageOrders";
 
   export const router = createBrowserRouter([
     {
@@ -39,6 +41,10 @@ import UpdateProduct from "../Layout/Main/Dashboard Pages/UpdateProduct";
           {
             path: '/cart',
             element: <PrivateRoute><Cart></Cart></PrivateRoute>
+          },
+          {
+            path: '/checkout',
+            element: <PrivateRoute><CheckOutForm></CheckOutForm></PrivateRoute>
           }
           
         ]
@@ -64,6 +70,10 @@ import UpdateProduct from "../Layout/Main/Dashboard Pages/UpdateProduct";
           path: 'updateproduct/:id',
           element: <AdminRoute><UpdateProduct></UpdateProduct></AdminRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+        },
+        {
+          path: 'manageorders',
+          element: <AdminRoute><ManageOrders></ManageOrders></AdminRoute>
         }
 
 

@@ -49,7 +49,12 @@ const AddItem = () => {
     }
 
     return (
-        <div>
+        <div className="mt-20">
+            <div className="w-2/4 mx-auto">
+                <h2 className="text-2xl font-semibold">Add Product</h2>
+                
+            </div>
+            <div className="divider"></div>
 
             <div className="w-2/4 mx-auto">
                 <form className="" onSubmit={handleSubmit(onSubmit)}>
@@ -77,8 +82,8 @@ const AddItem = () => {
                                 <option value="oilGhee">Oil & Ghee</option>
                                 <option value="noodleSoup">Noodles & Soup</option>
                                 <option value="tea">Tea</option>
-                                <option value="Spices">Spices</option>
-                                <option value="Snacks">Snacks</option>
+                                <option value="spices">Spices</option>
+                                <option value="snacks">Snacks</option>
                                 <option value="bathroomKitchen">Bathroom, Laundry & Kitchen </option>
                                 <option value="plasticBag">Plastic Bag</option>
                                 <option value="nuts">Nuts & Dry Fruits</option>
