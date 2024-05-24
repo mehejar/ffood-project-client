@@ -67,6 +67,7 @@ const Navbar = () => {
                 </div></NavLink>
                 
             </div>
+            
         </div>
     )
 }

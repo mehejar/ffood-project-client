@@ -64,7 +64,7 @@ const ProductsCard = ({ item }) => {
             <div>
                 <div className="border-2 p-4 border-green-300">
                     <div>
-                    <img className="w-[200px]" src={image}alt="" />
+                    <img className="w-[200px] mx-auto" src={image}alt="" />
                     <div className="divider"></div>
                     </div>
                     <div>

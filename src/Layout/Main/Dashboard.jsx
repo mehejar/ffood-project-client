@@ -21,7 +21,9 @@ const Dashboard = () => {
                             <>
                                 <li>
                                     <img className="w-[200px]" src={logo} alt="" />
+                                    
                                 </li>
+                                <div className="divider"></div>
                                 {/* <li className="flex gap-2 text-left py-4 items-center uppercase" to="/dashboard/adminHome"><FaHome></FaHome>Admin Home</li> */}
 
                                 <li><NavLink className="flex gap-2 my-4 items-center  uppercase" to="/dashboard/addItem"><ImSpoonKnife></ImSpoonKnife>Add Product</NavLink></li>
