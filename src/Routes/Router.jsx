@@ -16,6 +16,7 @@ import ManagePorducts from "../Layout/Main/Dashboard Pages/ManageProducts";
 import UpdateProduct from "../Layout/Main/Dashboard Pages/UpdateProduct";
 import CheckOutForm from "../Pages/Cart/CheckoutForm";
 import ManageOrders from "../Layout/Main/Dashboard Pages/ManageOrders";
+import Contact from "../Pages/Contact/Contact";
 
   export const router = createBrowserRouter([
     {
@@ -45,6 +46,14 @@ import ManageOrders from "../Layout/Main/Dashboard Pages/ManageOrders";
           {
             path: '/checkout',
             element: <PrivateRoute><CheckOutForm></CheckOutForm></PrivateRoute>
+          },
+          {
+            path: '/contact',
+            element: <Contact></Contact>
+          },
+          {
+            path: '/shop/category',
+            element: <Shop></Shop>
           }
           
         ]

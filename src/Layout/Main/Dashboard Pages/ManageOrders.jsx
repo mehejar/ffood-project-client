@@ -14,9 +14,18 @@ const ManageOrders = () => {
             return res.data
         }
     })
+    
+
 
     return (
-        <h2>{orders.length}</h2>
+        <div>
+           {
+            orders.map(item => <>
+            <h2>{item.name}</h2>
+            <h2>{item.cartId}</h2>
+            </>)
+           }
+        </div>
     )
 }
 

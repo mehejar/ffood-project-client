@@ -30,7 +30,9 @@ const useAxiosSecure = () =>{
         
         return response;
     }, async (error) => {
-        
+        if(loading){
+            return <span className="loading loading-ring loading-lg flex justify-center"></span>
+        }
 
         const status = error.response.status;
         // console.log('status error in interseptors', status);

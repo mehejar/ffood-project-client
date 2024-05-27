@@ -29,6 +29,7 @@ const Navbar = () => {
         <NavLink to='/'><li className="text-lg font-semibold"><a>Home</a></li></NavLink>
         <NavLink to='/shop'><li className="text-lg font-semibold"><a>All Category</a></li></NavLink>
         <NavLink to='/dashboard'><li className="text-lg font-semibold"><a>Dashboard</a></li></NavLink>
+        <NavLink to='/contact'><li className="text-lg font-semibold"><a>Contact</a></li></NavLink>
 
         {
             user ? <>

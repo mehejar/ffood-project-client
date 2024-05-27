@@ -12,12 +12,15 @@ import logo from "../../assets/Logo.png"
 
 const Dashboard = () => {
     const [isAdmin] = useAdmin()
+
+    
     return (
         <div className="flex">
             <div className="w-1/5 min-h-screen drop-shadow-xl bg-[#ffffff]">
                 <ul className="menu fixed mt-4 ml-8">
-                    {
+                    { 
                         isAdmin ?
+                        
                             <>
                                 <li>
                                     <img className="w-[200px]" src={logo} alt="" />
