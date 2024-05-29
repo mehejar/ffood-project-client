@@ -22,7 +22,8 @@ const ProductsCard = ({ item }) => {
                 name,
                 image,
                 price,
-                weight
+                weight,
+                quantity: 1
 
             }
             axiosSecure.post('/cart', cartItem)
@@ -58,28 +59,33 @@ const ProductsCard = ({ item }) => {
         }
         console.log(item, user.email);
     }
-
+    // to={`product/${_id}`
     return (
+
         <div>
             <div>
-                <div className="border-2 p-4 border-green-300">
-                    <div>
-                    <img className="w-[200px] mx-auto" src={image}alt="" />
-                    <div className="divider"></div>
-                    </div>
-                    <div>
+                <div className="border-2 p-4 hover:shadow-2xl hover:border-green-500 border-gray-300">
+                    <Link to={`product/${_id}`} >
                         <div>
-                            <h2 className="text-lg pt-3 px-3 font-semibold text-gray-600 text-left">{name}</h2>
+                            <img className="w-[200px] mx-auto" src={image} alt="" />
+                            <div className="divider"></div>
                         </div>
-                        <div className="flex py-3 px-3 justify-between">
-                            <h2 className=" font-semibold">${price}.00</h2>
-                            <h2>{weight}</h2>
-                        </div>
+                    </Link>
+                    <div>
+                        <Link to={`product/${_id}`}>
+                            <div>
+                                <h2 className="text-lg pt-3 px-3 font-semibold text-gray-600 text-left">{name}</h2>
+                            </div>
+                            <div className="flex py-3 px-3 justify-between">
+                                <h2 className=" font-semibold">${price}.00</h2>
+                                <h2>{weight}</h2>
+                            </div>
+                        </Link>
                         <div>
-                        <button
-                            onClick={() => handlecart(item)}
-                            className="bg-green-500 py-2 w-full rounded-md text-white  ">Add to Cart
-                        </button>
+                            <button
+                                onClick={() => handlecart(item)}
+                                className="bg-green-500 hover: py-2 w-full rounded-md hover:bg-orange-500 text-white  ">Add to Cart
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -105,6 +111,7 @@ const ProductsCard = ({ item }) => {
                 </div>
             </div> */}
         </div>
+
     )
 }
 

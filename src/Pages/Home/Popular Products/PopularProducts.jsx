@@ -4,12 +4,14 @@ import banner1 from '../../../assets/banner-02.jpg'
 import useProducts from '../../../use Componand/useProducts'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import '../../../Shared/styles.css';
 import 'swiper/css/pagination';
 // import Swiper from 'swiper'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const PopularProducts = () => {
 
@@ -27,9 +29,7 @@ const PopularProducts = () => {
 
     return (
         <div>
-            <div>
-                <img src={banner1} alt="" />
-            </div>
+            
 
             <div>
                 <Title
@@ -52,35 +52,59 @@ const PopularProducts = () => {
             </div> */}
             <div className='w-4/5 mx-auto my-10'>
                 <Swiper
-                    
+
+                    // ======
+                    // slidesPerView={4}
+                    // spaceBetween={30}
+                    // centeredSlides={true}
+                    // autoplay={{
+                    //     delay: 2500,
+                    //     disableOnInteraction: false,
+                    // }}
+                    // pagination={{
+                    //     clickable: true,
+                    // }}
+                    // ====
+
                     pagination={{
                         clickable: true,
-                    }} 
+                    }}
                     breakpoints={{
                         640: {
-                          slidesPerView: 2,
-                          spaceBetween: 20,
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+
+                            autoplay: {
+                                delay: 2500,
+                                disableOnInteraction: false,
+                            },
+                            pagination: {
+                                clickable: true,
+                            }
                         },
                         768: {
-                          slidesPerView: 3,
-                          spaceBetween: 20,
+                            slidesPerView: 3,
+                            spaceBetween: 20,
                         },
                         1024: {
-                          slidesPerView: 5,
-                          spaceBetween: 50,
-                        },}}
-                    navigation={true} 
-                    autoplay={{
-                        delay: 1500,
-                        disableOnInteraction: false
+                            slidesPerView: 4,
+                            spaceBetween: 50,
+                        },
                     }}
-                    modules={[Navigation]} className="mySwiper p-5">
-                    <div className='grid grid-cols-1'>
-                    {
-                        popularProducts.map(item => <SwiperSlide><ProductsCard
-                           item={item}
-                        ></ProductsCard> </SwiperSlide>)
-                    }
+
+
+
+                    navigation={true}
+
+
+                    modules={[Autoplay, Pagination, Navigation]} className="mySwiper p-5">
+                    <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" className='grid grid-cols-1'>
+                        {
+                            popularProducts.map(item => <SwiperSlide><ProductsCard
+                                item={item}
+                            ></ProductsCard> </SwiperSlide>)
+                        }
                     </div>
 
                 </Swiper>

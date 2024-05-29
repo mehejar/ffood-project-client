@@ -17,6 +17,8 @@ import UpdateProduct from "../Layout/Main/Dashboard Pages/UpdateProduct";
 import CheckOutForm from "../Pages/Cart/CheckoutForm";
 import ManageOrders from "../Layout/Main/Dashboard Pages/ManageOrders";
 import Contact from "../Pages/Contact/Contact";
+import PendingsOrder from "../Layout/Main/Dashboard Pages/PendingOrders";
+import ProductDetails from "../Shared/ProductDetails";
 
   export const router = createBrowserRouter([
     {
@@ -54,7 +56,12 @@ import Contact from "../Pages/Contact/Contact";
           {
             path: '/shop/category',
             element: <Shop></Shop>
-          }
+          },
+          {
+            path: 'product/:id',
+            element: <ProductDetails></ProductDetails>,
+            loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+          },
           
         ]
     },
@@ -82,7 +89,14 @@ import Contact from "../Pages/Contact/Contact";
         },
         {
           path: 'manageorders',
-          element: <AdminRoute><ManageOrders></ManageOrders></AdminRoute>
+          element: <AdminRoute><ManageOrders></ManageOrders></AdminRoute>,
+          children:[
+            
+            {
+              path: 'pendings',
+              element: <PendingsOrder></PendingsOrder>
+            },
+          ]
         }
 
 

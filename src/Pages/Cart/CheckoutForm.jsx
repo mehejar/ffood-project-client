@@ -12,7 +12,7 @@ const CheckOutForm = () => {
     const axiosSecure = useAxiosSecure()
 
     const [cart] = useCart()
-    const totalPrice = cart.reduce((total, item) => total + item.price, 0)
+    const totalPrice = cart.reduce((total, item) => total + item.subtotal, 0)
 
     const onSubmit = async (data) => {
 
@@ -23,6 +23,8 @@ const CheckOutForm = () => {
             price: totalPrice,
             date: new Date(),
             cartId: cart.map(item => item._id),
+            cartItem: cart.map(item => item.name),
+            cartWeight: cart.map(item => item.weight),
             menuItemId: cart.map(item => item.menuId),
             name: data.name,
             address: data.address,

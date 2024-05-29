@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import useCart from "../../Hooks/useCart"
 import CartItem from "./CartItem"
 import useAxiosSecure from "../../Hooks/useAxiosSecure"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { AuthContex } from "../../Provider/AuthProvider"
 
 const Cart = () => {
@@ -10,6 +10,7 @@ const Cart = () => {
 
 
     const [cart] = useCart()
+    
 
     const totalPrice = cart.reduce((total, item) => total + item.price, 0)
     console.log(totalPrice)
@@ -22,7 +23,7 @@ const Cart = () => {
     return (
         <div className="">
             <div className="bg-green-600 min-h-48">
-                <h2 className="text-white py-10 font-medium text-center text-5xl">Shopping cart</h2>
+                <h2 className="text-white py-10 font-medium text-center text-5xl">Checkout</h2>
                 <p className="text-center text-white">Happy Shopping</p>
             </div>
             <div className="w-full mx-auto lg:w-2/3">
@@ -54,18 +55,24 @@ const Cart = () => {
                     {/* --------------- */}
                     <div>
                         {
-                            cart.map(item => <CartItem item={item}></CartItem>)
+                            cart.map(item => <CartItem  item={item}></CartItem>)
                         }
                     </div>
                 </div>
 
             </div>
-            <div>
-                <div className="w-2/3 mx-auto my-4">
-                    <h2 className="text-lg font-semibold">Total Orders: {cart.length}</h2>
-                    <h2 className="text-lg font-semibold">Total Price ${totalPrice}</h2>
+            <div className="mb-10">
+                <div className="w-2/3 mx-auto flex flex-col gap-3 my-4">
+                    <div className="flex gap-8">
+                    <h2 className="text-lg ">Total Products:</h2>
+                    <h2 className="text-lg ">{cart.length}</h2>
+                    </div>
+                    <div className="flex gap-8">
+                    <h2 className="text-lg ">Subtotal:</h2>
+                    <h2 className="text-lg  ">${totalPrice}.00</h2>
+                    </div>
                     {
-                        <Link to="/checkout"><button className="p-2 text-white bg-orange-400 rounded">Check Out</button></Link>
+                        <Link to="/checkout"><button className="p-2 px-12 text-white bg-green-600 rounded-md">Check Out</button></Link>
                     }
                 </div>
             </div>

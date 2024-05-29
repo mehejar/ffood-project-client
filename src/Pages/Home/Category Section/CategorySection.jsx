@@ -16,7 +16,7 @@ const CategorySection = () => {
                     subTitle={'Choose best for your family and loved one'}
                 ></Title>
             </div>
-            <div>
+            <div data-aos="fade-up-left" >
                 <div className="flex flex-col lg:flex-row gap-2 lg:gap-5">
                     <img className="w-full rounded-lg lg:w-2/4 ml-1 lg:ml-0" src={catImage1} alt="" />
 

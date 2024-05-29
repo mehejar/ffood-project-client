@@ -108,7 +108,7 @@ const Shop = () => {
     return (
         <div className='w-4/5 mx-auto my-20'>
 
-           <div className='my-8'>
+           <div className='my-8 mx-auto'>
            <input className=" p-3 border-2 rounded-md mx-auto w-full max-w-3xl" onChange={(e) => setSearch(e.target.value)}
                 placeholder='Search contacts' type="search" />
            </div>
