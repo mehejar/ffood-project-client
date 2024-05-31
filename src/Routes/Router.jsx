@@ -19,6 +19,7 @@ import ManageOrders from "../Layout/Main/Dashboard Pages/ManageOrders";
 import Contact from "../Pages/Contact/Contact";
 import PendingsOrder from "../Layout/Main/Dashboard Pages/PendingOrders";
 import ProductDetails from "../Shared/ProductDetails";
+import UserDashboard from "../Pages/UserDashboard/UserDashboard";
 
   export const router = createBrowserRouter([
     {
@@ -62,6 +63,7 @@ import ProductDetails from "../Shared/ProductDetails";
             element: <ProductDetails></ProductDetails>,
             loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
           },
+
           
         ]
     },
@@ -73,6 +75,10 @@ import ProductDetails from "../Shared/ProductDetails";
         {
           path: 'additem',
           element: <AdminRoute><AddItem></AddItem></AdminRoute>
+        },
+        {
+          path: 'myOrders',
+          element: <UserDashboard></UserDashboard>
         },
         {
           path: 'allusers',

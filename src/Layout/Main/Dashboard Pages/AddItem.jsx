@@ -28,7 +28,8 @@ const AddItem = () => {
                 description: data.recipe,
                 sub_category: data.sub_category,
                 weight: data.weight,
-                image: res.data.data.display_url
+                image: res.data.data.display_url,
+                stock: 'inStock'
             }
             console.log(product)
             const productRes = await axiosSecure.post('/products', product)
@@ -36,12 +37,10 @@ const AddItem = () => {
             if (productRes.data.insertedId) {
                 reset()
                 Swal.fire({
-                    position: "top",
-                    icon: "Added Successfully",
-                    title: "Your item added to the card",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
+                    title: "Added Products!",
+                    text: "You added a new product",
+                    icon: "success"
+                  });
 
 
             }

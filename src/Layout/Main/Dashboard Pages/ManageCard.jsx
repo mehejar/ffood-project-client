@@ -9,9 +9,26 @@ import { Link } from "react-router-dom";
 
 const ManageCard = ({ product, index }) => {
 
-    const {_id, name, weight, image, price, category } = product
+    const {_id, name, weight, image, price, stock, category } = product
     const axiosSecure = useAxiosSecure()
     const [, refetch] = useProducts()
+
+    const outOfStock = (_id) =>{
+        // console.log('status')
+        axiosSecure.patch(`/products/outofstocks/${_id}`)
+            .then(res =>{
+                console.log(res.data)
+                refetch()
+            })
+    }
+    const inStock = (_id) =>{
+        // console.log('status')
+        axiosSecure.patch(`/products/instocks/${_id}`)
+        .then(res =>{
+            console.log(res.data)
+            refetch()
+        })
+    }
 
     const removeProduct = (_id) => {
         console.log('clicked')
@@ -52,24 +69,29 @@ const ManageCard = ({ product, index }) => {
             <div className="flex gap-10 items-center lg:gap-36">
                     <div className="w-[200px] flex items-center gap-3 text-left">
                         <h2>{index + 1}.</h2>
+                       
                         <img className="w-[75px]" src={image} alt="" />
+                        
+                        
                         <h2 className="text-base font-semibold">{name}</h2>
 
                     </div>
 
-                    <div className="w-[100px] text-left">
+                    <div className="w-[75px] text-left">
                         <h2>{weight}</h2>
                     </div>
-                    <div className="w-[100px]  text-left">
+                    <div className="w-[75px]  text-left">
                         <h2>{category}</h2>
                     </div>
-                    <div className="w-[100px] text-left">
+                    <div className="w-[75px] text-left">
                         <h2>{price}</h2>
                     </div>
-                    <div className="w-[100px] flex gap-4 text-left">
+                    <div className="w-[400px] flex gap-4 text-left">
                         {/* actions button */}
                         <Link to={`/dashboard/updateproduct/${_id}`}><button className="w-[40px] text-lg"><RiEdit2Fill></RiEdit2Fill></button></Link>
                         <button onClick={() => removeProduct(_id)} className="w-[40px] text-lg text-red-700"><RiDeleteBin2Fill></RiDeleteBin2Fill></button>
+                        <button onClick={() => outOfStock(_id)} className="w-[75px]  text-red-700">Stock Out</button>
+                        <button onClick={() => inStock(_id)} className="w-[75px]  text-red-700">In Stock</button> 
                     </div>
                 </div>
             </div>

@@ -35,12 +35,12 @@ const CheckOutForm = () => {
         // console.log(order)
         const orderRes = await axiosSecure.post('/orders', order)
         console.log('Added', orderRes.data)
-        if (orderRes.data.insertedId) {
+        if (orderRes.data.result.insertedId) {
             reset()
             Swal.fire({
                 position: "top",
-                icon: "Added Successfully",
-                title: "Your item added to the card",
+                icon: "Order Placed Successfully",
+                title: "Your order is placed, be patient for delivery",
                 showConfirmButton: false,
                 timer: 1500
             });

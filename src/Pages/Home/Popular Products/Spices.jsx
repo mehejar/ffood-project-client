@@ -11,10 +11,10 @@ import 'swiper/css/pagination';
 import CategoryHeading from '../../../Shared/CategoryHeading';
 // import Swiper from 'swiper'
 
-const Rice = () => {
+const Spices = () => {
 
     const [products] = useProducts()
-    const rice = products.filter(item => item.category === 'rice')
+    const spices = products.filter(item => item.category === 'spices')
     // const popularMenu = menu.filter(item => item.category === 'popular')
     const settings = {
         dots: false,
@@ -30,7 +30,7 @@ const Rice = () => {
 
 
             <div>
-                <CategoryHeading title={'Rice'}></CategoryHeading>
+                <CategoryHeading title={'Spices'}></CategoryHeading>
             </div>
 
 
@@ -41,7 +41,7 @@ const Rice = () => {
                     spaceBetween={30}
 
                     autoplay={{
-                        delay: 3500,
+                        delay: 2500,
                         disableOnInteraction: false,
                     }}
 
@@ -53,7 +53,7 @@ const Rice = () => {
                             slidesPerView: 1,
                             spaceBetween: 20,
                             autoplay:{
-                                delay: 3500,
+                                delay: 2500,
                                 disableOnInteraction: false,
                             }
                         },
@@ -61,7 +61,7 @@ const Rice = () => {
                             slidesPerView: 2,
                             spaceBetween: 20,
                             autoplay:{
-                                delay: 3500,
+                                delay: 2500,
                                 disableOnInteraction: false,
                             }
                         },
@@ -69,7 +69,7 @@ const Rice = () => {
                             slidesPerView: 3,
                             spaceBetween: 20,
                             autoplay:{
-                                delay: 3500,
+                                delay: 2500,
                                 disableOnInteraction: false,
                             }
                         },
@@ -77,7 +77,7 @@ const Rice = () => {
                             slidesPerView: 4,
                             spaceBetween: 50,
                             autoplay:{
-                                delay: 3500,
+                                delay: 2500,
                                 disableOnInteraction: false,
                             }
                         },
@@ -87,7 +87,7 @@ const Rice = () => {
                     modules={[Navigation, Autoplay, Pagination]} className="mySwiper p-5">
                     <div className='grid grid-cols-1'>
                         {
-                            rice.map(item => <SwiperSlide><ProductsCard
+                            spices.map(item => <SwiperSlide><ProductsCard
                                 item={item}
                             ></ProductsCard> </SwiperSlide>)
                         }
@@ -100,4 +100,4 @@ const Rice = () => {
     )
 }
 
-export default Rice
+export default Spices

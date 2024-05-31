@@ -3,6 +3,7 @@ import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { MdPending } from "react-icons/md";
 import { FaUserCircle } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import Swal from "sweetalert2";
 
 
 
@@ -14,18 +15,23 @@ const ManageOrderCard = ({ item }) => {
 
     const orderStatus = (_id) => {
         console.log('status')
-        axiosSecure.patch(`/orders/${_id}`)
+        if(status === "cancel"){
+            console.log('you cannot confirm the order')
+        }
+        else{
+            axiosSecure.patch(`/orders/${_id}`)
             .then(res => {
                 console.log(res.data)
                 if (res.data.modifieddCount > 0) {
                     refetch()
                     Swal.fire({
-                        title: "Deleted!",
-                        text: "Your file has been deleted.",
+                        title: "Confirmed Order!",
+                        text: `Order Id${_id}`,
                         icon: "success"
                     });
                 }
             })
+        }
     }
 
 

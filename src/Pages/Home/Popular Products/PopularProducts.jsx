@@ -29,7 +29,7 @@ const PopularProducts = () => {
 
     return (
         <div>
-            
+
 
             <div>
                 <Title
@@ -54,41 +54,49 @@ const PopularProducts = () => {
                 <Swiper
 
                     // ======
-                    // slidesPerView={4}
-                    // spaceBetween={30}
-                    // centeredSlides={true}
-                    // autoplay={{
-                    //     delay: 2500,
-                    //     disableOnInteraction: false,
-                    // }}
-                    // pagination={{
-                    //     clickable: true,
-                    // }}
-                    // ====
-
-                    pagination={{
-                        clickable: true,
+                    slidesPerView={4}
+                    spaceBetween={30}
+                    
+                    autoplay={{
+                        delay: 3500,
+                        disableOnInteraction: false,
                     }}
+
                     breakpoints={{
+                        0: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+
+                            autoplay: {
+                                delay: 3500,
+                                disableOnInteraction: false,
+                            },
+                        },
                         640: {
                             slidesPerView: 2,
                             spaceBetween: 20,
 
                             autoplay: {
-                                delay: 2500,
+                                delay: 3500,
                                 disableOnInteraction: false,
                             },
-                            pagination: {
-                                clickable: true,
-                            }
+
                         },
                         768: {
                             slidesPerView: 3,
                             spaceBetween: 20,
+                            autoplay: {
+                                delay: 3500,
+                                disableOnInteraction: false,
+                            },
                         },
                         1024: {
                             slidesPerView: 4,
                             spaceBetween: 50,
+                            autoplay: {
+                                delay: 3500,
+                                disableOnInteraction: false,
+                            },
                         },
                     }}
 
@@ -99,7 +107,7 @@ const PopularProducts = () => {
 
                     modules={[Autoplay, Pagination, Navigation]} className="mySwiper p-5">
                     <div data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom" className='grid grid-cols-1'>
+                        data-aos-anchor-placement="top-bottom" className='grid grid-cols-1'>
                         {
                             popularProducts.map(item => <SwiperSlide><ProductsCard
                                 item={item}

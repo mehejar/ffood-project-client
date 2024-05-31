@@ -16,7 +16,7 @@ const CategorySection = () => {
                     subTitle={'Choose best for your family and loved one'}
                 ></Title>
             </div>
-            <div data-aos="fade-up-left" >
+            <div data-aos="zoom-out-up" >
                 <div className="flex flex-col lg:flex-row gap-2 lg:gap-5">
                     <img className="w-full rounded-lg lg:w-2/4 ml-1 lg:ml-0" src={catImage1} alt="" />
 
@@ -39,7 +39,7 @@ const CategorySection = () => {
 
             <div className="text-center mt-8">
             <Link to={'/shop/category'}>
-            <button className="btn btn-outline border-0 border-b-4 mt-4">Order Now</button>
+            <button className="btn  mt-4">See All Category</button>
             </Link>
             </div>
 
