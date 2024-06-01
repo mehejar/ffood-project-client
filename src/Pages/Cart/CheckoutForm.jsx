@@ -24,6 +24,7 @@ const CheckOutForm = () => {
             date: new Date(),
             cartId: cart.map(item => item._id),
             cartItem: cart.map(item => item.name),
+            cartQty: cart.map(item => item.quantity),
             cartWeight: cart.map(item => item.weight),
             menuItemId: cart.map(item => item.menuId),
             name: data.name,

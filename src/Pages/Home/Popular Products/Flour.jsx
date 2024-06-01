@@ -10,6 +10,7 @@ import '../../../Shared/styles.css';
 import 'swiper/css/pagination';
 import CategoryHeading from '../../../Shared/CategoryHeading';
 // import Swiper from 'swiper'
+import bannerSpices from '../../../assets/bannerCat-13.jpg'
 
 const Flour = () => {
 
@@ -27,6 +28,9 @@ const Flour = () => {
 
     return (
         <div>
+            <div className='w-4/5 mx-auto my-4'>
+                <img src={bannerSpices} alt="" />
+            </div>
 
 
             <div>

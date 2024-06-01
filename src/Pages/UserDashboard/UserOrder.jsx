@@ -63,7 +63,7 @@ const UserOrderCard = ({ item }) => {
 
                         {
                             status === 'cancel' ? <button className="py-1 px-2 text-white font-semibold bg-red-500 rounded-md flex items-center gap-2"><RiVerifiedBadgeFill></RiVerifiedBadgeFill>Cancelled</button> : <button onClick={() => cancelOrder(_id)} className="py-1 px-2 text-white font-semibold bg-red-600 rounded-md flex items-center gap-2"><MdPending></MdPending>Cencel</button>
-                        },
+                        }
                         
 
                     </div>

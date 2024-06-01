@@ -10,6 +10,7 @@ import '../../../Shared/styles.css';
 import 'swiper/css/pagination';
 import CategoryHeading from '../../../Shared/CategoryHeading';
 // import Swiper from 'swiper'
+import bannerSpices from '../../../assets/bannerCat-12.jpg'
 
 const Spices = () => {
 
@@ -27,8 +28,9 @@ const Spices = () => {
 
     return (
         <div>
-
-
+            <div className='w-4/5 mx-auto my-4'>
+                <img src={bannerSpices} alt="" />
+            </div>
             <div>
                 <CategoryHeading title={'Spices'}></CategoryHeading>
             </div>
@@ -45,14 +47,11 @@ const Spices = () => {
                         disableOnInteraction: false,
                     }}
 
-                    // pagination={{
-                    //     clickable: true,
-                    // }}
                     breakpoints={{
-                        0:{
+                        0: {
                             slidesPerView: 1,
                             spaceBetween: 20,
-                            autoplay:{
+                            autoplay: {
                                 delay: 2500,
                                 disableOnInteraction: false,
                             }
@@ -60,7 +59,7 @@ const Spices = () => {
                         640: {
                             slidesPerView: 2,
                             spaceBetween: 20,
-                            autoplay:{
+                            autoplay: {
                                 delay: 2500,
                                 disableOnInteraction: false,
                             }
@@ -68,7 +67,7 @@ const Spices = () => {
                         768: {
                             slidesPerView: 3,
                             spaceBetween: 20,
-                            autoplay:{
+                            autoplay: {
                                 delay: 2500,
                                 disableOnInteraction: false,
                             }
@@ -76,14 +75,14 @@ const Spices = () => {
                         1024: {
                             slidesPerView: 4,
                             spaceBetween: 50,
-                            autoplay:{
+                            autoplay: {
                                 delay: 2500,
                                 disableOnInteraction: false,
                             }
                         },
                     }}
                     navigation={true}
-                    
+
                     modules={[Navigation, Autoplay, Pagination]} className="mySwiper p-5">
                     <div className='grid grid-cols-1'>
                         {

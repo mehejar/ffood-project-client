@@ -11,7 +11,7 @@ import Swal from "sweetalert2";
 
 const ManageOrderCard = ({ item }) => {
     const axiosSecure = useAxiosSecure()
-    const { cartItem, _id, status, name, date, address, phone, email } = item
+    const { cartItem, _id, status, name,quantity, cartQty, cartWeight, date, address, phone, email } = item
 
     const orderStatus = (_id) => {
         console.log('status')
@@ -61,6 +61,8 @@ const ManageOrderCard = ({ item }) => {
 
                     <div className="mt-4">
                         <h2><span className="font-semibold">Products:</span> {cartItem}</h2>
+                        <h2><span className="font-semibold">Weight:</span> {cartWeight}</h2>
+                        <h2><span className="font-semibold">Quantity:</span> {cartQty}</h2>
                     </div>
                 </div>
                 <div className="w-1/5">
