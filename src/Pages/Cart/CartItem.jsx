@@ -25,7 +25,12 @@ const CartItem = ({ item }) => {
         axiosSecure.patch(`/cart/${_id}`, amount)
             .then(res => {
                 refetch()
-                setQuantity
+                // Swal.fire({
+                //     title: "Added Products!",
+                //     text: "You added a new product",
+                //     icon: "success"
+                //   });
+                
                 console.log(res.data)
             })
     }
@@ -33,6 +38,7 @@ const CartItem = ({ item }) => {
         quantities < 99 ? setQuantity(quantities + 1) : setQuantity(99)
         const amount = {
             totalQuantity: quantities,
+            subtotal: quantities * price,
         }
         axiosSecure.patch(`/cart/${_id}`, amount)
             .then(res => {
@@ -88,7 +94,7 @@ const CartItem = ({ item }) => {
                     </div>
                     <div className="lg:w-[300px] lg:-ml-28 text-left">
                         <h2 className="text-xl font-semibold">{name}</h2>
-                        <h2>Weight: {weight} lbs</h2>
+                        <h2>Weight: {weight}</h2>
                     </div>
 
 
@@ -98,7 +104,7 @@ const CartItem = ({ item }) => {
                         </div>
                         <div className="flex w-[150px] items-center gap-4">
                             <button className="font-semibold text-4xl" onClick={() => setDecrease()}>-</button>
-                            <h2>{quantity}</h2>
+                            <h2>{quantities}</h2>
                             <button className="font-semibold text-2xl" onClick={() => setIncrease()}>+</button>
                         </div>
                         <div className="w-[100px] text-left">

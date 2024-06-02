@@ -23,7 +23,8 @@ const ProductsCard = ({ item }) => {
                 image,
                 price,
                 weight,
-                quantity: 1
+                quantity: 1,
+                subtotal: price,
 
             }
             axiosSecure.post('/cart', cartItem)
@@ -33,12 +34,10 @@ const ProductsCard = ({ item }) => {
                     if (res.data.insertedId) {
                         refetch()
                         Swal.fire({
-                            position: "top",
-                            icon: "Added Successfully",
-                            title: "Your item added to the card",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
+                            title: "Added to the cart ",
+                            text: `${name}Added`,
+                            icon: "success"
+                          });
                     }
                 })
         }

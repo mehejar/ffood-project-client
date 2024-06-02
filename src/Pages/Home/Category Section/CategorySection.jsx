@@ -9,6 +9,8 @@ import catImage6 from '../../../assets/cat--13.png'
 
 const CategorySection = () => {
     return (
+        
+        <Link  to={'/shop/category'}>
         <div className="lg:w-3/4 px-8 my-28 mx-auto">
             <div className="mb-8">
                 <Title
@@ -45,6 +47,7 @@ const CategorySection = () => {
 
 
         </div>
+        </Link>
     )
 }
 

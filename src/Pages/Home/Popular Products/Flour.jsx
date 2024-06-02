@@ -28,7 +28,7 @@ const Flour = () => {
 
     return (
         <div>
-            <div className='w-4/5 mx-auto my-4'>
+            <div className='w-full lg:w-4/5 mx-auto mt-4'>
                 <img src={bannerSpices} alt="" />
             </div>
 

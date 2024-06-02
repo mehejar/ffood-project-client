@@ -29,10 +29,14 @@ const ManageOrderCard = ({ item }) => {
                         text: `Order Id${_id}`,
                         icon: "success"
                     });
+
+                    
                 }
             })
         }
     }
+
+    console.log(cartItem)
 
 
     return (
@@ -59,10 +63,10 @@ const ManageOrderCard = ({ item }) => {
 
                     </div>
 
-                    <div className="mt-4">
-                        <h2><span className="font-semibold">Products:</span> {cartItem}</h2>
-                        <h2><span className="font-semibold">Weight:</span> {cartWeight}</h2>
-                        <h2><span className="font-semibold">Quantity:</span> {cartQty}</h2>
+                    <div className="mt-4 flex gap-8">
+                        <h2><span className="font-semibold">Products:</span> {cartItem?.map(item => <><h2>{item}</h2></>)}</h2>
+                        <h2><span className="font-semibold">Weight:</span> {cartWeight?.map(item => <><h2>{item}</h2></>)}</h2>
+                        <h2><span className="font-semibold">Quantity:</span> {cartQty?.map(item => <><h2>{item}</h2></>)}</h2>
                     </div>
                 </div>
                 <div className="w-1/5">
