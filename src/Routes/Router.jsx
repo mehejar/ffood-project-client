@@ -61,7 +61,7 @@ import UserDashboard from "../Pages/UserDashboard/UserDashboard";
           {
             path: 'product/:id',
             element: <ProductDetails></ProductDetails>,
-            loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+            loader: ({params}) => fetch(`https://freshfood-server.vercel.app/products/${params.id}`)
           },
 
           
@@ -91,7 +91,7 @@ import UserDashboard from "../Pages/UserDashboard/UserDashboard";
         {
           path: 'updateproduct/:id',
           element: <AdminRoute><UpdateProduct></UpdateProduct></AdminRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+          loader: ({params}) => fetch(`https://freshfood-server.vercel.app/products/${params.id}`)
         },
         {
           path: 'manageorders',

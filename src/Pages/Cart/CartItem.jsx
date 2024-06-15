@@ -94,7 +94,7 @@ const CartItem = ({ item }) => {
                     </div>
                     <div className="lg:w-[300px] lg:-ml-28 text-left">
                         <h2 className="text-xl font-semibold">{name}</h2>
-                        <h2>Weight: {weight}</h2>
+                        <h2>Per pack: {weight}</h2>
                     </div>
 
 

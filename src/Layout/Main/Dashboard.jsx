@@ -13,6 +13,7 @@ import UserDashboard from "../../Pages/UserDashboard/UserDashboard";
 
 const Dashboard = () => {
     const [isAdmin] = useAdmin()
+    // const isAdmin = true
 
     
     return (
@@ -49,7 +50,7 @@ const Dashboard = () => {
     
                         <li><NavLink className="flex gap-2 py-4 uppercase items-center" to="/"><FaHome></FaHome>Home</NavLink></li>
     
-                        <li><NavLink className="flex gap-2 py-4 uppercase  items-center" to="/"><FaPalette></FaPalette> Menu</NavLink></li>
+                        <li><NavLink className="flex gap-2 py-4 uppercase  items-center" to="/shop"><FaPalette></FaPalette>All Products</NavLink></li>
                     </ul>
     
                 </div>

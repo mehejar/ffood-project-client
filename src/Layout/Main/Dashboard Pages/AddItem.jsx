@@ -123,13 +123,10 @@ const AddItem = () => {
                             <label className="label">
                                 <span className="label-text">Weight*</span>
                             </label>
-                            <select defaultValue='value' {...register("weight")} className=" select select-bordered w-full">
-                                <option disabled selected>Choose A Food Category</option>
-                                <option value="2lbs">2 lbs</option>
-                                <option value="4lbs">4 lbs</option>
-
-
-                            </select>
+                            <input {...register("weight")}
+                                type="text"
+                                placeholder="Weight"
+                                className="input input-bordered w-full " />
                         </div>
 
                     </div>

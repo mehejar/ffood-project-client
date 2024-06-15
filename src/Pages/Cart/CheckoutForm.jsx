@@ -110,6 +110,8 @@ const CheckOutForm = () => {
 
                     <div>
                         <button type="submit" className="flex gap-2 items-center bg-white btn text-xl">Confirm Order</button>
+                        
+                        
                     </div>
                 </form>
             </div>

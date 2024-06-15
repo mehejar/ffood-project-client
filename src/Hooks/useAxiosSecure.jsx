@@ -1,5 +1,5 @@
 // export const axiosSecure = axios.create({
-//     baseURL: 'http://localhost:5000'
+//     baseURL: 'https://freshfood-server.vercel.app'
 // })
 
 import axios from "axios";
@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContex } from "../Provider/AuthProvider";
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://freshfood-server.vercel.app'
 })
 
 const useAxiosSecure = () =>{

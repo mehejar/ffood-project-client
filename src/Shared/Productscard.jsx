@@ -73,11 +73,11 @@ const ProductsCard = ({ item }) => {
                     <div>
                         <Link to={`product/${_id}`}>
                             <div>
-                                <h2 className="text-lg pt-3 px-3 font-semibold text-gray-600 text-left">{name}</h2>
+                                <h2 className="pt-3 px-3 text-gray-600 text-left">{name}</h2>
                             </div>
                             <div className="flex py-3 px-3 justify-between">
-                                <h2 className=" font-semibold">${price}.00</h2>
-                                <h2>{weight}</h2>
+                                <h2 className=" text-xl font-semibold">${price}.00</h2>
+                                <h2>Qty: {weight}</h2>
                             </div>
                         </Link>
                         <div>

@@ -11,7 +11,7 @@ const Cart = () => {
 
 
 
-    const [cart] = useCart()
+    const [cart, refetch] = useCart()
 
 
     const totalPrice = cart.reduce((total, item) => total + item.subtotal, 0)
@@ -55,7 +55,7 @@ const Cart = () => {
                                     <h2>Price</h2>
                                 </div>
                                 <div className="w-[100px] lg:-ml-36  text-left">
-                                    <h2>Quantity</h2>
+                                    <h2>Total Pack</h2>
                                 </div>
                                 <div className="w-[100px] text-left">
                                     <h2></h2>
@@ -83,7 +83,13 @@ const Cart = () => {
                             <h2 className="text-lg  ">${totalPrice}.00</h2>
                         </div>
                         {
+                            totalPrice <= 499? <>
+                            
+                            <button className="p-2 lg:w-1/6 px-12 text-gray-500 bg-base-200 rounded-md">Check Out</button>
+                            <h2 className=" text-red-600">Please add minimum $500 item*</h2>
+                            </> :
                             <Link to="/checkout"><button className="p-2 px-12 text-white bg-green-600 rounded-md">Check Out</button></Link>
+                            
                         }
                     </div>
                 </div>

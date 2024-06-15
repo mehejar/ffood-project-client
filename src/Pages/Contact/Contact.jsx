@@ -87,9 +87,11 @@ const Contact = () => {
                     <div>
                         <h2 className="text-xl font-semibold">Address:</h2>
                         <p>1101 Flushing Avenue, Brooklyn 11237.</p>
-                        <h2 className="text-xl mt-8 font-semibold">Information:</h2>
+                        <h2 className="text-xl mt-8 font-semibold text-gray-500">Information:</h2>
+                        <p><span className="text-lg font-semibold">Hours</span> <br /> Monday to Friday (9 AM - 6 PM) <br /> Saturday (9 AM - 3 AM) <br /> Sunday - closed</p>
                         <p>
-                            Call (09:00 AM to 10:00 PM) to contact us or for any information.</p>
+                            Call to contact us.</p>
+                           
                         <p>
                             +1 929-471-5485,  +1 347-844-9037
                         </p>
