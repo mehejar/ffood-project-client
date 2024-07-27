@@ -10,12 +10,12 @@ import '../../../Shared/styles.css';
 import 'swiper/css/pagination';
 import CategoryHeading from '../../../Shared/CategoryHeading';
 // import Swiper from 'swiper'
-import bannerSpices from '../../../assets/bannerCat-13-12.jpg'
+import bannerSpices from '../../../assets/bannerCat-13.jpg'
 
-const Rice = () => {
+const Bathroom = () => {
 
     const [products] = useProducts()
-    const rice = products.filter(item => item.category === 'rice')
+    const bathroom = products.filter(item => item.category === 'bathroomKitchen')
     // const popularMenu = menu.filter(item => item.category === 'popular')
     const settings = {
         dots: false,
@@ -31,8 +31,9 @@ const Rice = () => {
             <div className='w-full lg:w-4/5 mx-auto mt-4'>
             </div>
 
+
             <div>
-                <CategoryHeading title={'Rice'}></CategoryHeading>
+                <CategoryHeading title={'Bathroom & Kitchen'}></CategoryHeading>
             </div>
 
 
@@ -43,7 +44,7 @@ const Rice = () => {
                     // spaceBetween={30}
 
                     // autoplay={{
-                    //     delay: 3500,
+                    //     delay: 2000,
                     //     disableOnInteraction: false,
                     // }}
 
@@ -51,43 +52,43 @@ const Rice = () => {
                     //     clickable: true,
                     // }}
                     breakpoints={{
-                        0: {
+                        0:{
                             slidesPerView: 2,
                             spaceBetween: 20,
-                            // autoplay: {
-                            //     delay: 3500,
+                            // autoplay:{
+                            //     delay: 2000,
                             //     disableOnInteraction: false,
                             // }
                         },
                         640: {
                             slidesPerView: 2,
                             spaceBetween: 20,
-                            // autoplay: {
-                            //     delay: 3500,
+                            // autoplay:{
+                            //     delay: 2000,
                             //     disableOnInteraction: false,
                             // }
                         },
                         768: {
                             slidesPerView: 3,
                             spaceBetween: 20,
-                            // autoplay: {
-                            //     delay: 3500,
+                            // autoplay:{
+                            //     delay: 2000,
                             //     disableOnInteraction: false,
                             // }
                         },
                         1024: {
                             slidesPerView: 5,
-                            spaceBetween: 20,
-                            // autoplay: {
-                            //     delay: 3500,
+                            spaceBetween: 50,
+                            // autoplay:{
+                            //     delay: 2000,
                             //     disableOnInteraction: false,
                             // }
                         },
                     }}
-                     className="mySwiper p-5">
+                    className="mySwiper p-5">
                     <div className='grid grid-cols-1'>
                         {
-                            rice.map(item => <SwiperSlide><ProductsCard
+                            bathroom.map(item => <SwiperSlide><ProductsCard
                                 item={item}
                             ></ProductsCard> </SwiperSlide>)
                         }
@@ -100,4 +101,4 @@ const Rice = () => {
     )
 }
 
-export default Rice
+export default Bathroom

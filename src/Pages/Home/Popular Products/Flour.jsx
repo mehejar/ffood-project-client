@@ -29,7 +29,6 @@ const Flour = () => {
     return (
         <div>
             <div className='w-full lg:w-4/5 mx-auto mt-4'>
-                <img src={bannerSpices} alt="" />
             </div>
 
 
@@ -41,54 +40,52 @@ const Flour = () => {
             <div className='w-4/5 mx-auto my-10'>
                 <Swiper
 
-                    slidesPerView={4}
-                    spaceBetween={30}
+                    // slidesPerView={5}
+                    // spaceBetween={30}
 
-                    autoplay={{
-                        delay: 2000,
-                        disableOnInteraction: false,
-                    }}
+                    // autoplay={{
+                    //     delay: 2000,
+                    //     disableOnInteraction: false,
+                    // }}
 
                     // pagination={{
                     //     clickable: true,
                     // }}
                     breakpoints={{
                         0:{
-                            slidesPerView: 1,
+                            slidesPerView: 2,
                             spaceBetween: 20,
-                            autoplay:{
-                                delay: 2000,
-                                disableOnInteraction: false,
-                            }
+                            // autoplay:{
+                            //     delay: 2000,
+                            //     disableOnInteraction: false,
+                            // }
                         },
                         640: {
                             slidesPerView: 2,
                             spaceBetween: 20,
-                            autoplay:{
-                                delay: 2000,
-                                disableOnInteraction: false,
-                            }
+                            // autoplay:{
+                            //     delay: 2000,
+                            //     disableOnInteraction: false,
+                            // }
                         },
                         768: {
                             slidesPerView: 3,
                             spaceBetween: 20,
-                            autoplay:{
-                                delay: 2000,
-                                disableOnInteraction: false,
-                            }
+                            // autoplay:{
+                            //     delay: 2000,
+                            //     disableOnInteraction: false,
+                            // }
                         },
                         1024: {
-                            slidesPerView: 4,
+                            slidesPerView: 5,
                             spaceBetween: 50,
-                            autoplay:{
-                                delay: 2000,
-                                disableOnInteraction: false,
-                            }
+                            // autoplay:{
+                            //     delay: 2000,
+                            //     disableOnInteraction: false,
+                            // }
                         },
                     }}
-                    navigation={true}
-                    
-                    modules={[Navigation, Autoplay, Pagination]} className="mySwiper p-5">
+                    className="mySwiper p-5">
                     <div className='grid grid-cols-1'>
                         {
                             flour.map(item => <SwiperSlide><ProductsCard

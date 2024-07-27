@@ -20,6 +20,7 @@ import Contact from "../Pages/Contact/Contact";
 import PendingsOrder from "../Layout/Main/Dashboard Pages/PendingOrders";
 import ProductDetails from "../Shared/ProductDetails";
 import UserDashboard from "../Pages/UserDashboard/UserDashboard";
+import AboutUs from "../Pages/AboutUs";
 
   export const router = createBrowserRouter([
     {
@@ -63,6 +64,15 @@ import UserDashboard from "../Pages/UserDashboard/UserDashboard";
             element: <ProductDetails></ProductDetails>,
             loader: ({params}) => fetch(`https://freshfood-server.vercel.app/products/${params.id}`)
           },
+          {
+            path: 'shop/product/:id',
+            element: <ProductDetails></ProductDetails>,
+            loader: ({params}) => fetch(`https://freshfood-server.vercel.app/products/${params.id}`)
+          },
+          {
+            path: 'aboutus',
+            element: <AboutUs></AboutUs>
+          }
 
           
         ]

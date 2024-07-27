@@ -4,6 +4,7 @@ import { MdPending } from "react-icons/md";
 import { FaUserCircle } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import Swal from "sweetalert2";
+import moment from "moment";
 
 
 
@@ -11,7 +12,7 @@ import Swal from "sweetalert2";
 
 const ManageOrderCard = ({ item }) => {
     const axiosSecure = useAxiosSecure()
-    const { cartItem, _id, status, name,quantity, cartQty, cartWeight, date, address, phone, email } = item
+    const { cartItem, _id, status, name, quantity, price, cartQty, cartWeight, date, address, phone, email } = item
 
     const orderStatus = (_id) => {
         console.log('status')
@@ -47,7 +48,8 @@ const ManageOrderCard = ({ item }) => {
                     <div className="flex gap-10">
                         <div className="w-[300px]">
 
-                            <h2 className="flex text-lg font-semibold items-center gap-2">#{_id}</h2>
+                            <h2 className="flex text-lg font-semibold items-center gap-2">#{_id.slice(17, 24)}</h2>
+                            <h2>Date: {moment(date).add(1, 'day').format('LLL')}</h2>
                         </div>
                         <div className="w-[200px]">
                             <h2 className="flex text-lg items-center gap-2"><FaUserCircle></FaUserCircle>{name}</h2>
@@ -68,6 +70,9 @@ const ManageOrderCard = ({ item }) => {
                         <h2><span className="font-semibold">Weight:</span> {cartWeight?.map(item => <><h2>{item}</h2></>)}</h2>
                         <h2><span className="font-semibold">Quantity:</span> {cartQty?.map(item => <><h2>{item}</h2></>)}</h2>
                     </div>
+                    <div>
+                        <h2 className="text-lg font-semibold py-2">Total Order Value: ${price}</h2>
+                    </div>
                 </div>
                 <div className="w-1/5">
                    
@@ -83,7 +88,7 @@ const ManageOrderCard = ({ item }) => {
                         <div className="modal-box w-2/3 max-w-5xl">
                             <div className="flex justify-between">
                                 <div>
-                                    <h3 className="font-bold text-lg">#{_id}</h3>
+                                <h2 className="flex text-lg font-semibold items-center gap-2">#{_id.slice(17, 24)}</h2>
                                     <h3 className=" text-lg flex items-center gap-2"><FaUserCircle></FaUserCircle>{name}</h3>
                                 </div>
                                 <h2><span className="font-semibold">Date and Time:</span> {date}</h2>

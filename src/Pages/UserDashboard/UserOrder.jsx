@@ -7,7 +7,7 @@ import Swal from "sweetalert2"
 
 const UserOrderCard = ({ item }) => {
     const axiosSecure = useAxiosSecure()
-    const { cartItem, _id, status, name, date, address, phone, email } = item
+    const { cartItem, _id, status, name, date, address,cartWeight, cartQty, price, phone, email } = item
 
     const cancelOrder = (_id) => {
         console.log('status')
@@ -34,7 +34,7 @@ const UserOrderCard = ({ item }) => {
                     <div className="flex flex-col lg:flex-row gap-10">
                         <div className="w-[300px] flex- gap-2">
 
-                            <h2 className="flex text-lg font-semibold items-center gap-2">#{_id}</h2>
+                        <h2 className="flex text-lg font-semibold items-center gap-2">#{_id.slice(17, 24)}</h2>
                             {
                                 status === 'pending' ? <button className="py-1 px-2 text-red-700 font-semibold bg-red-600 bg-opacity-25 rounded-md flex items-center gap-2"><MdPending></MdPending>Pending</button> : <button className="py-1 px-2 text-white font-semibold bg-green-500 rounded-md flex items-center gap-2"><RiVerifiedBadgeFill></RiVerifiedBadgeFill> Confirmed</button>
                             },
@@ -55,18 +55,25 @@ const UserOrderCard = ({ item }) => {
                     </div>
 
                     <div className="mt-4">
-                        <h2><span className="font-semibold">Products:</span> {cartItem}</h2>
+                    <div className="mt-4 flex gap-8">
+                        <h2><span className="font-semibold">Products:</span> {cartItem?.map(item => <><h2>{item}</h2></>)}</h2>
+                        <h2><span className="font-semibold">Weight:</span> {cartWeight?.map(item => <><h2>{item}</h2></>)}</h2>
+                        <h2><span className="font-semibold">Quantity:</span> {cartQty?.map(item => <><h2>{item}</h2></>)}</h2>
+                    </div>
+                    <div>
+                        <h2 className="text-lg font-semibold py-2">Total Order Value: ${price}</h2>
+                    </div>
                     </div>
                 </div>
                 <div className="flex flex-col lg:flex-row justify-between">
-                    <div className="w-2/5 ">
+                    {/* <div className="w-2/5 ">
 
                         {
                             status === 'cancel' ? <button className="py-1 px-2 text-white font-semibold bg-red-500 rounded-md flex items-center gap-2"><RiVerifiedBadgeFill></RiVerifiedBadgeFill>Cancelled</button> : <button onClick={() => cancelOrder(_id)} className="py-1 px-2 text-white font-semibold bg-red-600 rounded-md flex items-center gap-2"><MdPending></MdPending>Cencel</button>
                         }
                         
 
-                    </div>
+                    </div> */}
                     <div className=" my-4 lg:my-0 lg:mx-12">
                         <button onClick={() => document.getElementById('my_modal_4').showModal()} className="py-1 px-2 text-gray-700 border-2 font-semibold bg-gray-50 rounded-md flex items-center gap-2">Details</button>
                         {/* ============================ modal ======================= */}

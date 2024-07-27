@@ -3,6 +3,8 @@ import useAxiosSecure from "../Hooks/useAxiosSecure";
 import useCart from "../Hooks/useCart";
 import { AuthContex } from "../Provider/AuthProvider";
 import { useContext, useState } from "react";
+import { FaShoppingCart } from "react-icons/fa";
+
 
 const ProductDetails = () => {
     const product = useLoaderData()
@@ -22,6 +24,8 @@ const ProductDetails = () => {
 
     }
 
+    const subtotal = quantities 
+
     const { name,
         _id,
         category,
@@ -40,7 +44,8 @@ const ProductDetails = () => {
                 image,
                 price,
                 weight,
-                quantity: quantities
+                quantity: quantities,
+                subtotal: quantities*price,
 
             }
             axiosSecure.post('/cart', cartItem)
@@ -81,13 +86,13 @@ const ProductDetails = () => {
         <div className="my-16">
             <div className="flex flex-col my-8 px-4 lg:w-2/3 mx-auto lg:flex-row">
                 <div className="lg:w-1/2">
-                    <img className="w-[400px] mx-auto" src={image} alt="" />
+                    <img className="max-w-[400px] max-h-[400px] mx-auto" src={image} alt="" />
                 </div>
                 <div className="lg:w-1/2">
                     <h2 className="text-5xl my-2 lg:my-8 font-bold">{name}</h2>
-                    <h2 className="text-2xl my-2 lg:my-8 text-orange-500 font-semibold">${price}.00</h2>
+                    <h2 className="text-2xl my-2 lg:my-8 text-orange-500 font-semibold">${price}</h2>
                     <div className="flex my-2 lg:my-8 items-center">
-                        <h2 className="border-2 p-3">Weight</h2>
+                        <h2 className="border-2 p-3">Quantity</h2>
                         <h2 className="border-2 p-3">{weight}</h2>
                     </div>
                     <div className="flex items-center gap-4">
@@ -98,7 +103,7 @@ const ProductDetails = () => {
                         </div>
                         <button
                             onClick={() => handlecart(product)}
-                            className="bg-green-500 hover: py-2 h-[45px] w-1/2 rounded-md hover:bg-orange-500 text-white  ">Add to Cart
+                            className="bg-[#649C25]  hover: py-2 h-[45px] w-1/4 rounded-md hover:bg-orange-500 font-semibold text-white ">Add to Cart
                         </button>
                     </div>
                 </div>

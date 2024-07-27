@@ -6,7 +6,6 @@ import Info from "../../Shared/Info";
 const Main = () => {
     return (
         <div>
-            <Info></Info>
             <div className="md:w-3/4 mx-auto">
                 
                 <Navbar></Navbar>

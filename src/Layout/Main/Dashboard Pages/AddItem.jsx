@@ -48,9 +48,9 @@ const AddItem = () => {
     }
 
     return (
-        <div className="mt-20">
-            <div className="w-2/4 mx-auto">
-                <h2 className="text-2xl font-semibold">Add Product</h2>
+        <div className="">
+            <div className="w-4/5 font-bold text-3xl pt-8 mx-auto">
+                <h2>Add Product</h2>
                 
             </div>
             <div className="divider"></div>

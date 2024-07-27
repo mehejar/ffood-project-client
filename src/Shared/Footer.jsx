@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import logo from "../assets/Logo.png"
 
 const Footer = () => {
@@ -16,7 +17,7 @@ const Footer = () => {
             </nav>
             <nav className="text-white" >
                 <h6 className="footer-title">Company</h6>
-                <h6 className="footer-title">About</h6>
+                <Link to={'/aboutus'} className="link link-hover">About</Link>
                 <a className="link link-hover">Works</a>
                 <a className="link link-hover">Featues</a>
                 <a className="link link-hover">Career</a>

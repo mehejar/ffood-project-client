@@ -64,6 +64,11 @@ const UpdateProduct = () =>{
 
     return(
         <div>
+            <div className="w-4/5 font-bold text-3xl pt-8 mx-auto">
+                <h2>Update Product</h2>
+                
+            </div>
+            <div className="divider"></div>
             <div className="w-2/4 mx-auto">
                 <form className="" onSubmit={handleSubmit(onSubmit)}>
 
@@ -134,13 +139,11 @@ const UpdateProduct = () =>{
                             <label className="label">
                                 <span className="label-text">Weight*</span>
                             </label>
-                            <select defaultValue={weight} {...register("weight")} className=" select select-bordered w-full">
-                                <option disabled selected>Choose A Food Category</option>
-                                <option value="2lbs">2 lbs</option>
-                                <option value="4lbs">4 lbs</option>
-
-
-                            </select>
+                            <input {...register("weight")}
+                                type="text"
+                                defaultValue={weight}
+                                placeholder="Weight"
+                                className="input input-bordered w-full " />
                         </div>
 
                     </div>
@@ -161,7 +164,7 @@ const UpdateProduct = () =>{
                     </div>
 
                     <div>
-                        <button type="submit" className="flex gap-2 items-center bg-white btn text-xl">Add Product</button>
+                        <button type="submit" className="flex gap-2 items-center bg-white btn text-xl">Update Product</button>
                     </div>
                 </form>
             </div>

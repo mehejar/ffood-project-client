@@ -54,58 +54,55 @@ const PopularProducts = () => {
                 <Swiper
 
                     // ======
-                    slidesPerView={4}
-                    spaceBetween={30}
+                    // slidesPerView={5}
+                    // spaceBetween={30}
                     
-                    autoplay={{
-                        delay: 3500,
-                        disableOnInteraction: false,
-                    }}
+                    // autoplay={{
+                    //     delay: 3500,
+                        
+                    // }}
 
                     breakpoints={{
                         0: {
-                            slidesPerView: 1,
+                            slidesPerView: 2,
                             spaceBetween: 20,
 
-                            autoplay: {
-                                delay: 3500,
-                                disableOnInteraction: false,
-                            },
+                            // autoplay: {
+                            //     delay: 3500,
+                            //     disableOnInteraction: false,
+                            // },
                         },
                         640: {
                             slidesPerView: 2,
                             spaceBetween: 20,
 
-                            autoplay: {
-                                delay: 3500,
-                                disableOnInteraction: false,
-                            },
+                            // autoplay: {
+                            //     delay: 3500,
+                            //     disableOnInteraction: false,
+                            // },
 
                         },
                         768: {
                             slidesPerView: 3,
                             spaceBetween: 20,
-                            autoplay: {
-                                delay: 3500,
-                                disableOnInteraction: false,
-                            },
+                            // autoplay: {
+                            //     delay: 3500,
+                            //     disableOnInteraction: false,
+                            // },
                         },
                         1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 50,
-                            autoplay: {
-                                delay: 3500,
-                                disableOnInteraction: false,
-                            },
+                            slidesPerView: 5,
+                            spaceBetween: 20,
+                            // autoplay: {
+                            //     delay: 3500,
+                            //     disableOnInteraction: false,
+                            // },
                         },
                     }}
 
 
 
-                    navigation={true}
-
-
-                    modules={[Autoplay, Pagination, Navigation]} className="mySwiper p-5">
+                   className="mySwiper p-5">
                     <div data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom" className='grid grid-cols-1'>
                         {
